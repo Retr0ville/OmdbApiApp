@@ -6,8 +6,8 @@ import Banner from './components/Banner';
 import SearchBar from './components/SearchBar';
 import Category from './components/Category';
 
-const magicApiUrl = 'http://www.omdbapi.com/?apiKey=7f17bbec&s=harry-potter&page=';
-const heroApiUrl = 'http://www.omdbapi.com/?apiKey=7f17bbec&s=batman&page=';
+const magicApiUrl = 'https://www.omdbapi.com/?apiKey=7f17bbec&s=harry-potter&page=';
+const heroApiUrl = 'https://www.omdbapi.com/?apiKey=7f17bbec&s=batman&page=';
 
 const fetchData = async (url: string) => {
   const response = await axios.get(url);
@@ -49,7 +49,7 @@ function App() {
   }, []);
   useEffect(() => {
     if (searchValue !== '') {
-      const searchUrl = `http://www.omdbapi.com/?apiKey=7f17bbec&s=${searchValue}&page=1`;
+      const searchUrl = `https://www.omdbapi.com/?apiKey=7f17bbec&s=${searchValue}&page=1`;
       fetchData(searchUrl).then((data) => {
         if (data.Search.length > 0) {
           const mappedSearch = mappedData(data.Search);
