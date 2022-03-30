@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import {
   Flex, Input, Text,
 } from '@chakra-ui/react';
 
 function SearchBar({ setSearchValue, searchValue }: {
-  setSearchValue: () => void,
+  setSearchValue: (value: string) => void,
   searchValue: string}) {
   return (
     <Flex
