@@ -4,7 +4,7 @@ import {
 } from '@chakra-ui/react';
 
 function SearchBar({ setSearchValue, searchValue }: {
-  setSearchValue: (value: string) => void,
+  setSearchValue: () => void,
   searchValue: string}) {
   return (
     <Flex
