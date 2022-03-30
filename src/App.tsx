@@ -38,7 +38,6 @@ function App() {
         const mappedMag = mappedData(data.Search);
         setMagicCategory([...magicCategory, ...mappedMag]);
       });
-      console.log('here');
       fetchData(heroApiUrl + page).then((data) => {
         const mappedHero = mappedData(data.Search);
         setHeroCategory([...heroCategory, ...mappedHero]);
